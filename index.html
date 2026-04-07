@@ -2,43 +2,69 @@
 <html>
 <head>
   <title>Barda</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
-      font-family: Roboto;
-      letter-spacing: 2px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      overflow: hidden;
+      font-family: Roboto, sans-serif;
       background: #ffffff;
       color: #1a1a1a;
     }
 
-    .container {
+    /* container principal rodado */
+    .wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-30deg);
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
     }
 
     img {
-      width: 260px;
+      width: clamp(180px, 40vw, 320px);
       margin-bottom: 40px;
     }
 
-    p {
-      font-size: 13px;
-      letter-spacing: 2px;
-      color: #2525bb; /* azul inspirado no logo */
-      opacity: 0.8;
+    /* faixa */
+    .ticker {
+      width: 200vw; /* largo para dar efeito contínuo */
+      overflow: hidden;
+    }
+
+    .ticker-text {
+      display: inline-block;
+      white-space: nowrap;
+      font-size: clamp(12px, 2vw, 16px);
+      letter-spacing: 3px;
+      color: #2525bb;
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(-50%);
+      }
+      to {
+        transform: translateX(0%);
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
+  <div class="wrapper">
     <img src="logo.png" alt="Barda">
-    <p>website em construção</p>
+
+    <div class="ticker">
+      <div class="ticker-text">
+        WEBSITE EM CONSTRUÇÃO • WEBSITE EM CONSTRUÇÃO • WEBSITE EM CONSTRUÇÃO • WEBSITE EM CONSTRUÇÃO •
+      </div>
+    </div>
   </div>
 </body>
 </html>
