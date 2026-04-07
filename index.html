@@ -16,11 +16,11 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) rotate(-5deg);
+      transform: translate(-50%, -50%) rotate(-3deg);
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 200vw;
+      width: 300vw;
     }
 
     img {
@@ -36,7 +36,7 @@
     .ticker-track {
       display: flex;
       width: max-content;
-      animation: scroll 20s linear infinite;
+      animation: scroll 40s linear infinite; /* MAIS LENTO */
     }
 
     .ticker-text {
@@ -44,7 +44,7 @@
       font-size: clamp(12px, 2vw, 16px);
       letter-spacing: 3px;
       color: #2525bb;
-      padding-right: 40px;
+      padding-right: 60px;
     }
 
     @keyframes scroll {
@@ -52,7 +52,7 @@
         transform: translateX(0);
       }
       to {
-        transform: translateX(-50%);
+        transform: translateX(-33.333%);
       }
     }
   </style>
@@ -64,12 +64,19 @@
 
     <div class="ticker">
       <div class="ticker-track">
+
         <div class="ticker-text">
-          WEBSITE EM CONSTRUÇÃO • WEBSITE EM CONSTRUÇÃO • WEBSITE EM CONSTRUÇÃO •
+          WEBSITE EM CONSTRUÇÃO • WEBSITE UNDER CONSTRUCTION • WEBSITE EM CONSTRUÇÃO • WEBSITE UNDER CONSTRUCTION • WEBSITE EM CONSTRUÇÃO • WEBSITE UNDER CONSTRUCTION •
         </div>
+
         <div class="ticker-text">
-          WEBSITE EM CONSTRUÇÃO • WEBSITE EM CONSTRUÇÃO • WEBSITE EM CONSTRUÇÃO •
+          WEBSITE EM CONSTRUÇÃO • WEBSITE UNDER CONSTRUCTION • WEBSITE EM CONSTRUÇÃO • WEBSITE UNDER CONSTRUCTION • WEBSITE EM CONSTRUÇÃO • WEBSITE UNDER CONSTRUCTION •
         </div>
+
+        <div class="ticker-text">
+          WEBSITE EM CONSTRUÇÃO • WEBSITE UNDER CONSTRUCTION • WEBSITE EM CONSTRUÇÃO • WEBSITE UNDER CONSTRUCTION • WEBSITE EM CONSTRUÇÃO • WEBSITE UNDER CONSTRUCTION •
+        </div>
+
       </div>
     </div>
   </div>
